@@ -14,6 +14,7 @@ $(document).ready(function() {
         // $('h3').click(getAlert(i));
         var h3 = $('<h3>Accusation ' + i + ':</h3>');
         $('body').append(h3);
+        // when an h3 element is click it will run the function being called
         $(h3).click(getAlert(i));
 
     };
@@ -21,7 +22,7 @@ $(document).ready(function() {
     function getAlert(num) {
         var friendName = ['Blake', 'Kayla', 'Cole', 'Mary', 'Josh'];
         var locationName = ['Hoover','Bessemer','Homewood', 'Mountion Brook','Pelham', 'McCalla','Vestavia Hills','Alabaster','Hueytown','Trussville'];
-        var weaponName = ['Sword','Spear','Hammer','Mace','Fist','Bow','dagger','Sheild','Rod','Staff','Cannons','Whip','Bomb','Axe','Gauntlet','trident','knife','needles']; 
+        var weaponName = ['Sword','Spear','Hammer','Mace','Fist','Bow','dagger','Sheild','Rod','Staff','Cannons','Whip','Bomb','Axe','Gauntlet','trident','knife','needles','javelins','club']; 
         return function() {
             var name = num % friendName.length;
             console.log(name);
