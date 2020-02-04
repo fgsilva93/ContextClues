@@ -1,25 +1,34 @@
+var friendName = ['Blake', 'Kayla', 'Cole', 'Mary', 'Josh'];
+var locationName = ['Hoover','Bessemer','Homewood', 'Mountion Brook','Pelham', 'McCalla','Vestavia Hills','Alabaster','Hueytown','Trussville'];
+var weaponName = ['Sword','Spear','Hammer','Mace','Fist','Bow','dagger','Sheild','Rod','Staff','Cannons','Whip','Bomb','Axe','Gauntlet','trident']; 
+
 $(document).ready(function() {
     for(i=1; i <= 100; i++) {
         $('body').append('<h3 class=h3>Assucation '+ i + ':</h3>');
         $('.h3').click(getAlert(i));
     };
-    function getAlert(num) {
-        var friendName = ['Blake', 'Kayla', 'Cole', 'Mary', 'Josh'];
-        var locationName = ['Hoover','Bessemer','Homewood', 'Mountion Brook','Pelham', 'McCalla','Vestavia Hills','Alabaster','Hueytown','Trussville'];
-        var weaponName = ['Sword','Spear','Hammer','Mace','Fist','Bow','dagger','Sheild','Rod','Staff','Cannons','Whip','Bomb','Axe','Gauntlet','trident']; 
 
-        var name = num % friendName.length;
-        var location = num % locationName.length;
-        var weapon = num % weaponName.length; 
-        function alerting() {
-            alert("Accusation " +i+ ":  I accuse "+ friendName[name]+" with the "+ weaponName[weapon]+ " in the "+ locationName[location]+ "!");
+    function getAlert(num) {
+        // var friendName = ['Blake', 'Kayla', 'Cole', 'Mary', 'Josh'];
+        // var locationName = ['Hoover','Bessemer','Homewood', 'Mountion Brook','Pelham', 'McCalla','Vestavia Hills','Alabaster','Hueytown','Trussville'];
+        // var weaponName = ['Sword','Spear','Hammer','Mace','Fist','Bow','dagger','Sheild','Rod','Staff','Cannons','Whip','Bomb','Axe','Gauntlet','trident']; 
+
+        // var name = num % friendName.length;
+        // var location = num % locationName.length;
+        // var weapon = num % weaponName.length; 
+        return function() {
+            var name = num % friendName.length;
+            var location = num % locationName.length;
+            var weapon = num % weaponName.length; 
+            alert("I accuse "+ friendName[name]+" with the "+ weaponName[weapon]+ " in the "+ locationName[location]+ "!");
         };
-        return alerting; 
-    };
+        //return alerting; 
+    }; //return alerting;
 });
 
 //I accuse FRIEND_NAME, with the WEAPON_NAME in the LOCATION_NAME!
-//junk code;
+
+//JUNK CODE;
 
 // accuse();
 // function accuse() {
