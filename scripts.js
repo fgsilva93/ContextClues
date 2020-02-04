@@ -1,21 +1,10 @@
-// var friendName = ['Blake', 'Kayla', 'Cole', 'Mary', 'Josh'];
-// var locationName = ['Hoover','Bessemer','Homewood', 'Mountion Brook','Pelham', 'McCalla','Vestavia Hills','Alabaster','Hueytown','Trussville'];
-// var weaponName = ['Sword','Spear','Hammer','Mace','Fist','Bow','dagger','Sheild','Rod','Staff','Cannons','Whip','Bomb','Axe','Gauntlet','trident','knife']; 
-
 $(document).ready(function() {
 
-    // var friendName = ['Blake', 'Kayla', 'Cole', 'Mary', 'Josh'];
-    // var locationName = ['Hoover','Bessemer','Homewood', 'Mountion Brook','Pelham', 'McCalla','Vestavia Hills','Alabaster','Hueytown','Trussville'];
-    // var weaponName = ['Sword','Spear','Hammer','Mace','Fist','Bow','dagger','Sheild','Rod','Staff','Cannons','Whip','Bomb','Axe','Gauntlet','trident','knife']; 
-    
-    //making the 100 accusation 
     for(i = 1; i <= 100; i++) {
-        // $('body').append('<h3>Accusation '+ i + ':</h3>');
-        // $('h3').click(getAlert(i));
-        var h3 = $('<h3>Accusation ' + i + ':</h3>');
+
+        var h3 = $('<h3>Accusation' + i + ' :</h3>');
         $('body').append(h3);
-        // when an h3 element is click it will run the function being called
-        $(h3).click(getAlert(i));
+        (h3).click(getAlert(i));
 
     };
     
@@ -30,7 +19,7 @@ $(document).ready(function() {
             console.log(location); 
             var weapon = num % weaponName.length; 
             console.log(weapon);
-            alert("I accuse "+ friendName[name]+" with the "+ weaponName[weapon]+ " in the "+ locationName[location]+ "!");
+            alert("I accuse "+ friendName[name]+" with the murder of the victim with a "+ weaponName[weapon]+ " in the "+ locationName[location]+ "!");
         };
     }; 
 });
@@ -55,3 +44,6 @@ console.log('end of scripts');
 //         alert('accusation ' + count + ":" + " I accuse example" ); 
 //     })
 // }
+
+ // $('body').append('<h3>Accusation '+ i + ':</h3>');
+        // $('h3').click(getAlert(i));
